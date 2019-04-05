@@ -2,7 +2,7 @@
 function displayRepositories() {
   var repos = JSON.parse(this.responseText);
   console.log(repos);
-  const repoList = `<ul>${repos.map(r => '<li>' + <a href=`https://api.github.com/users/${input}/repos`> + r.name + </a> +' - <a href="#" data-repo="' + r.name + '" onclick="getCommits(this)">Get Commits</a></li>')
+  const repoList = `<ul>${repos.map(r => '<li>' + <a href=`https://api.github.com/users/${input}/repos`>r.name</a> +' - <a href="#" data-repo="' + r.name + '" onclick="getCommits(this)">Get Commits</a></li>')
     .join('')}</ul>`;
   document.getElementById('repositories').innerHTML = repoList;
 }
