@@ -11,20 +11,20 @@ function displayRepositories() {
 }
 
 function getRepositories() {
-  let input = document.getElementById("username").value
+  let username = document.getElementById("username").value
   const req = new XMLHttpRequest();
   req.addEventListener('load', displayRepositories);
-  req.open('GET', `https://api.github.com/users/${input}/repos`);
+  req.open('GET', `https://api.github.com/users/${username}/repos`);
   req.send();
 }
 
 function getCommits(el) {
-  let input = document.getElementById("username").value
+  let username = document.getElementById("username").value
   const name = el.dataset.repo;
-  console.log('https://api.github.com/repos/' + input + '/' + name + '/commits')
+  console.log('https://api.github.com/repos/' + username + '/' + name + '/commits')
   const req = new XMLHttpRequest();
   req.addEventListener('load', displayCommits);
-  req.open('GET', 'https://api.github.com/repos/' + input + '/' + name + '/commits');
+  req.open('GET', 'https://api.github.com/repos/' + username + '/' + name + '/commits');
   req.send();
 }
 
