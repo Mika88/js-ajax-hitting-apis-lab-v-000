@@ -1,5 +1,5 @@
 // your code here
-let input = document.getElementById("username").value
+let input = document.getElementById().value
 
 function displayRepositories() {
   var repos = JSON.parse(this.responseText);
