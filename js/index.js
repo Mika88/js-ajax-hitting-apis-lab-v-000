@@ -19,6 +19,7 @@ function getRepositories() {
 }
 
 function getCommits(el) {
+  let input = document.getElementById("username").value
   const name = el.dataset.repo;
   const req = new XMLHttpRequest();
   req.addEventListener('load', displayCommits);
