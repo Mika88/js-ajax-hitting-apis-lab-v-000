@@ -1,4 +1,6 @@
 // your code here
+let input = document.getElementById("username").value
+
 function displayRepositories() {
   var repos = JSON.parse(this.responseText);
   console.log(repos);
@@ -8,7 +10,6 @@ function displayRepositories() {
 }
 
 function getRepositories() {
-  let input = document.getElementById("username").value
   const req = new XMLHttpRequest();
   req.addEventListener('load', displayRepositories);
   req.open('GET', `https://api.github.com/users/${input}/repos`);
