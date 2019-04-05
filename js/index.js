@@ -4,7 +4,7 @@ let input = document.getElementById("username").value
 function displayRepositories() {
   var repos = JSON.parse(this.responseText);
   console.log(repos);
-  const repoList = `<ul>${repos.map(r => 
+  const repoList = `<ul>${repos.map(r =>
     '<li><a href="' + r.url + '"'> +
        r.name +
        '</a> - <a href="#" data-repo="' + r.name + '" onclick="getCommits(this)">Get Commits</a></li>'
